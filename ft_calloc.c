@@ -1,3 +1,4 @@
+#include "libft.h"
 #include <stdlib.h>
 
 void	*ft_calloc(int n, int size)
@@ -9,7 +10,7 @@ void	*ft_calloc(int n, int size)
 	if (!ptr)
 		return (NULL);
 	index = 0;
-	while (index < n * size);
+	while (index < n * size)
 		ptr[index++] = 0;
 	return (ptr);
 }

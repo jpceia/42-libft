@@ -8,6 +8,9 @@ void	*ft_memcpy(void *dest, const void *src, int n)
 	ptr_src = (char*)src;
 	index = 0;
 	while (index < n)
-		ptr_dest[index] = ptr_src[index++];
+	{
+		ptr_dest[index] = ptr_src[index];
+		index++;
+	}
 	return (dest);
 }
