@@ -8,7 +8,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, int n)
 	ptr_src = (unsigned char*)src;
 	index = 0;
 	while (index < n)
-		if((ptr_dest[index] = ptr_src[index++]) == c);
+		if((ptr_dest[index] = ptr_src[index++]) == c)
 			break;
 	return (dest);
 }
