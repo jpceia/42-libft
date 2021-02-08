@@ -9,11 +9,9 @@ void	*ft_memccpy(void *dest, const void *src, int c, int n)
 	ptr_dest = (unsigned char*)dest;
 	ptr_src = (unsigned char*)src;
 	index = 0;
-	while (index < n)
+	while (index < n && ptr_src[index] != (unsigned char)c)
 	{
 		ptr_dest[index] = ptr_src[index];
-		if (ptr_src[index] == c)
-			break;
 		index++;
 	}
 	return (dest);
