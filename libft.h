@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 23:09:24 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/08 23:23:19 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, int n);
 void	*ft_memchr(const void *str, int c, int n);
 int		ft_memcmp(const void *str1, const void *str2, int n);
 int		ft_strlen(char *str);
-char	*ft_strchr(char *str, int ch);
-char	*ft_strrchr(char *str, int ch);
+char	*ft_strchr(const char *str, int ch);
+char	*ft_strrchr(const char *str, int ch);
 int		ft_strncmp(const char *s1, const char *s2, int n);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
