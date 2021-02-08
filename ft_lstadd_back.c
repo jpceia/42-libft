@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/08 21:44:47 by jpceia            #+#    #+#             */
+/*   Updated: 2021/02/08 21:45:20 by jpceia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "ft_list.h"
- 
-void	ft_lstadd_back(t_list **lst , t_list *new)
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list* l;
+	t_list	*l;
 
 	l = *lst;
 	while (l->next)

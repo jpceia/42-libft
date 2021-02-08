@@ -3,21 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 05:06:55 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/08 09:18:31 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/08 21:39:10 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-
-int		ft_count_words(char const *s, char c)
+int	ft_count_words(char const *s, char c)
 {
-	int count;
-	int prev_space;
+	int	count;
+	int	prev_space;
 
 	count = 0;
 	prev_space = 1;

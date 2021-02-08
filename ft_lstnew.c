@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/08 21:46:40 by jpceia            #+#    #+#             */
+/*   Updated: 2021/02/08 21:50:08 by jpceia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "ft_list.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list* lst;
+	t_list	*lst;
 
-	if (!(lst = malloc(sizeof(*lst))))
+	lst = malloc(sizeof(*lst));
+	if (!lst)
 		return (NULL);
 	lst->next = NULL;
 	lst->content = content;

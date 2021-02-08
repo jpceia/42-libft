@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/08 21:42:48 by jpceia            #+#    #+#             */
+/*   Updated: 2021/02/08 21:42:49 by jpceia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_bzero(void *str, int n)
@@ -5,7 +17,7 @@ void	*ft_bzero(void *str, int n)
 	char	*ptr;
 
 	ptr = (char*)str;
-	while (ptr - (char*)str < n) 
+	while (ptr - (char *)str < n)
 		*(ptr++) = 0;
 	return (str);
 }
