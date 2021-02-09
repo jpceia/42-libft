@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 23:23:19 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 00:01:59 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+int		ft_isspace(int c);
 void	*ft_memset(void *str, int c, int n);
 void	*ft_bzero(void *str, int n);
 void	*ft_memcpy(void *dest, const void *src, int n);

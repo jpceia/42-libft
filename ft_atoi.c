@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:26:58 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 23:10:37 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 00:04:00 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 	int sgn;
 
 	nb = 0;
-	while ((*str == ' ') || (*str == '\t'))
+	while (ft_isspace(*str))
 		str++;
 	sgn = 1;
 	if (*str == '-' || *str == '+')
