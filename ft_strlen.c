@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:36:00 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 21:36:16 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 15:46:42 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	index;
 

@@ -3,48 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 03:42:08 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/08 09:16:13 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/09 18:22:29 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*freeable_empty_string(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
+	int		size;
+	char	*res;
 
-	str = malloc(1);
-	*str = 0;
-	return (str);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	char	*result;
-	int		index;
-	int		res_size;
-
-	if (size == 0)
-		return (freeable_empty_string());
-	res_size = ft_strlen(sep) * (size - 1);
-	index = 0;
-	while (index < size)
-		res_size += ft_strlen(strs[index++]);
-	result = malloc(res_size + 1);
-	if (result == NULL)
+	size = ft_strlen(s1);
+	size += ft_strlen(s2);
+	res = malloc(size + 1);
+	if (!res)
 		return (NULL);
-	result[0] = '\0';
-	index = 0;
-	while (index < size - 1)
-	{
-		ft_strcat(result, strs[index]);
-		ft_strcat(result, sep);
-		index++;
-	}
-	ft_strcat(result, strs[index]);
-	return (result);
+	res[0] = '\0';
+	ft_strcat(res, s1);
+	ft_strcat(res, s2);
+	return (res);
 }

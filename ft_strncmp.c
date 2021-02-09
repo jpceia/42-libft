@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:35:46 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 00:36:19 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 00:39:39 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, int n)
 	if (n == 0)
 		return (0);
 	index = 0;
-	while (s1[index] && s1[index] == s2[index] && index < n)
+	while (s1[index] && s1[index] == s2[index] && index < n - 1)
 		index++;
 	return ((unsigned char)s1[index] - (unsigned char)s2[index]);
 }

@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:44:47 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 00:15:47 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 00:18:56 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*l;
+	t_list *l;
+
+	if(!*lst)
+	{
+		*lst = new;
+		return ;
+	}
 
 	l = *lst;
-	if (!l)
-		*lst = new;
-	else
-	{
-		while (l->next)
-			l = l->next;
-		l->next = new;
-	}
+	while (l->next)
+		l = l->next;
+	l->next = new;
 }

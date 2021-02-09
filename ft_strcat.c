@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:37:20 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 21:38:13 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 18:35:46 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int	n;
 	int	index;

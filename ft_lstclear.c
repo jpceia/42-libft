@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:45:47 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 00:26:54 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 15:06:51 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*l;
-	t_list	*l_next;
+	t_list	*holder;
 
-	if (!lst || !*lst)
+	if (lst == NULL)
 		return ;
-	l = *lst;
-	while (l)
+	while (*lst)
 	{
-		l_next = l->next;
-		if (l->content)
-			del(l->content);
-		free(l);
-		l = l_next;
+		holder = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = holder;
 	}
 }
