@@ -44,9 +44,9 @@ SRCS		= \
 			ft_lstclear.c \
 			ft_lstiter.c \
 			ft_lstmap.c \
-			ft_strndup.c \
-			ft_strcat.c \
-			ft_isspace.c
+			ft_strndup_bonus.c \
+			ft_strcat_bonus.c \
+			ft_isspace_bonus.c
 
 OBJS		= ${SRCS:.c=.o}
 

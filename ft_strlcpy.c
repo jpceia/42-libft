@@ -6,18 +6,18 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 16:41:18 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 21:43:57 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dest, const char *src, int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
-	while (src[index] && index < size - 1)
+	while (src[index] && index + 1 < size)
 	{
 		dest[index] = src[index];
 		index++;

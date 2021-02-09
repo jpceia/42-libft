@@ -6,16 +6,16 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:42:43 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 21:42:44 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 21:46:05 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(int n, int size)
+void	*ft_calloc(size_t n, size_t size)
 {
 	char	*ptr;
-	int		index;
+	size_t	index;
 
 	ptr = malloc(n * size);
 	if (!ptr)

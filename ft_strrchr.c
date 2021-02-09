@@ -6,18 +6,16 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:32:36 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 00:04:41 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 21:34:39 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int ch)
+char	*ft_strrchr(const char *str, int c)
 {
 	int		index;
-	char	c;
 
-	c = (char)ch;
 	index = 0;
 	while (str[index])
 		index++;

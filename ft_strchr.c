@@ -6,17 +6,14 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:37:00 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 18:24:10 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 21:33:52 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int ch)
+char	*ft_strchr(const char *str, int c)
 {
-	char	c;
-
-	c = (char)ch;
 	if (c)
 	{
 		while (*str)

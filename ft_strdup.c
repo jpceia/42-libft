@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 03:20:23 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/05 03:30:38 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/09 21:47:12 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	unsigned int	index;
 	char			*dest;

@@ -6,16 +6,16 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 16:42:45 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 20:56:08 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/09 21:44:29 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char	*big, const char *little, int len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	int	index;
-	int k;
+	size_t	index;
+	size_t	k;
 
 	index = 0;
 	while (big[index] && index < len) {
