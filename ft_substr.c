@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 18:28:39 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 21:48:56 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/10 00:53:06 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	index;
 	char			*res;

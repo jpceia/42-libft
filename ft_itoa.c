@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 16:49:22 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 17:57:35 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/10 01:09:01 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_itoa_core(int n, char* buf)
+int	ft_itoa_core(int n, char *buf)
 {
 	int	index;
 
@@ -22,14 +22,14 @@ int		ft_itoa_core(int n, char* buf)
 		buf[0] = '-';
 		index = 1;
 		if (n < -9)
-			index += ft_itoa_core(- (n / 10), buf + 1);
-		buf[index] = "0123456789"[-(int)(n % 10)];
+			index += ft_itoa_core(0 - (n / 10), buf + 1);
+		buf[index] = '0' - (n % 10);
 	}
 	else
 	{
 		if (n > 9)
 			index += ft_itoa_core(n / 10, buf);
-		buf[index] = "0123456789"[(int)(n % 10)];
+		buf[index] = '0' + (n % 10);
 	}
 	buf[index + 1] = 0;
 	return (index + 1);

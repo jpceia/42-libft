@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:47:05 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 21:38:42 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/10 01:04:38 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		ptr_dest[index] = ptr_src[index];
 		if (ptr_src[index] == (char)c)
-			return (&ptr_dest[index+1]);
+			return (&ptr_dest[index + 1]);
 		index++;
 	}
 	return (NULL);

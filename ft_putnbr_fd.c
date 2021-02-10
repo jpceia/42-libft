@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:39:48 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 13:41:28 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/10 01:07:19 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd('-', fd);
 		if (n < -9)
-			ft_putnbr_fd(- (n / 10), fd);
+			ft_putnbr_fd(0 - (n / 10), fd);
 		ft_putchar_fd('0' - (n % 10), fd);
 	}
 }
