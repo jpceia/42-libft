@@ -34,7 +34,9 @@ SRCS		= \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
+			ft_putnbr_fd.c
+
+BONUS_SRCS	= \
 			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
@@ -48,7 +50,9 @@ SRCS		= \
 			ft_strcat_bonus.c \
 			ft_isspace_bonus.c
 
-OBJS		= ${SRCS:.c=.o}
+OBJS		= $(SRCS:.c=.o)
+
+BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
 
 NAME		= libft.a
 
@@ -58,24 +62,27 @@ RM			= rm -f
 
 CFLAGS		= -Wall -Wextra -Werror
 
-all:		${NAME}
+all:		$(NAME)
 
 .c.o:
 			${CC} ${CFLAGS} -I${INCDIR} -c $< -o ${<:.c=.o}
 
-$(NAME):	${OBJS}
-			${AR} ${NAME} ${OBJS}
+$(NAME):	$(OBJS)
+			$(AR) $(NAME) $(OBJS)
 
 clean:
-			${RM} ${OBJS}
+			$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re:			fclean all
 
+bonus:		$(OBJS) $(BONUS_OBJS)
+			$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+
 so:
-			${CC} -fPIC $(CFLAGS) -c $(SRCS)
+			$(CC) -fPIC $(CFLAGS) -c $(SRCS)
 			gcc -shared -o libft.so $(OBJS)
 
-.PHONY:		all clean fclean re so
+.PHONY:		all clean fclean re bonus so
