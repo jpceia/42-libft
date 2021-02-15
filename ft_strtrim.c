@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 18:50:03 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/10 00:57:06 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/15 18:02:39 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_contains(char c, char const *charset)
+int		ft_contains(char c, char const *charset)
 {
 	while (*charset)
 		if (c == *charset++)

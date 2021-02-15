@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 05:06:55 by jceia             #+#    #+#             */
-/*   Updated: 2021/02/09 18:13:38 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/15 17:59:42 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, char c)
+int		ft_count_words(char const *s, char c)
 {
 	int	count;
 	int	prev_space;
