@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:46:24 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 21:46:25 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/11 10:51:32 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
-		return (0);
+		return (NULL);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

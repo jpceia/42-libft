@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:46:07 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/08 21:49:03 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/11 10:51:08 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst)
+		return ;
 	del(lst->content);
 	free(lst);
 }
