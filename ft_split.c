@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 05:06:55 by jceia             #+#    #+#             */
-/*   Updated: 2021/02/15 21:15:25 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 21:36:32 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*internal_strndup(char const *str, int n)
+static char	*ft_strndup(char const *str, int n)
 {
 	char	*res;
 	int		size;
@@ -64,7 +64,7 @@ static char	**ft_split_core(char **str_list, char const *s, char c)
 		if (*s == c)
 		{
 			if (!prev_space)
-				str_list[index++] = internal_strndup(s_cpy, s - s_cpy);
+				str_list[index++] = ft_strndup(s_cpy, s - s_cpy);
 			prev_space = 1;
 		}
 		else if (prev_space)
@@ -75,7 +75,7 @@ static char	**ft_split_core(char **str_list, char const *s, char c)
 		s++;
 	}
 	if (!prev_space)
-		str_list[index++] = internal_strndup(s_cpy, s - s_cpy);
+		str_list[index++] = ft_strndup(s_cpy, s - s_cpy);
 	return (str_list);
 }
 
