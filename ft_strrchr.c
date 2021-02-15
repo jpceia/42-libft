@@ -6,7 +6,7 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:32:36 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/09 21:34:39 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/02/15 20:00:09 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *str, int c)
 		index++;
 	while (index >= 0)
 	{
-		if (str[index] == c)
+		if ((unsigned char)str[index] == (unsigned char)c)
 			return (&((char *)str)[index]);
 		index--;
 	}

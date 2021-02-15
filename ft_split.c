@@ -6,11 +6,28 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 05:06:55 by jceia             #+#    #+#             */
-/*   Updated: 2021/02/15 17:59:42 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 20:29:49 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*internal_strndup(char const *str, int n)
+{
+	char	*res;
+	int		size;
+
+	size = 0;
+	while (str[size] && size < n)
+		size++;
+	res = malloc(size + 1);
+	if (!res)
+		return (NULL);
+	res[size] = 0;
+	while (size--)
+		res[size] = str[size];
+	return (res);
+}
 
 int		ft_count_words(char const *s, char c)
 {
@@ -47,7 +64,7 @@ char	**ft_split_core(char **str_list, char const *s, char c)
 		if (*s == c)
 		{
 			if (!prev_space)
-				str_list[index++] = ft_strndup(s_cpy, s - s_cpy);
+				str_list[index++] = internal_strndup(s_cpy, s - s_cpy);
 			prev_space = 1;
 		}
 		else if (prev_space)
@@ -58,7 +75,7 @@ char	**ft_split_core(char **str_list, char const *s, char c)
 		s++;
 	}
 	if (!prev_space)
-		str_list[index++] = ft_strndup(s_cpy, s - s_cpy);
+		str_list[index++] = internal_strndup(s_cpy, s - s_cpy);
 	return (str_list);
 }
 
