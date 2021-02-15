@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 03:42:08 by jceia             #+#    #+#             */
-/*   Updated: 2021/02/15 20:30:24 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 21:08:25 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*internal_strcat(char *dest, const char *src)
+static char	*internal_strcat(char *dest, const char *src)
 {
 	int	n;
 	int	index;
@@ -28,7 +28,7 @@ char	*internal_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	int		size;
 	char	*res;

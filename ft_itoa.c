@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 16:49:22 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/15 18:02:05 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 21:01:58 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_itoa_core(int n, char *buf)
+static int	ft_itoa_core(int n, char *buf)
 {
 	int	index;
 
@@ -35,7 +35,7 @@ int		ft_itoa_core(int n, char *buf)
 	return (index + 1);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 

@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 05:06:55 by jceia             #+#    #+#             */
-/*   Updated: 2021/02/15 20:29:49 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 21:15:25 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*internal_strndup(char const *str, int n)
+static char	*internal_strndup(char const *str, int n)
 {
 	char	*res;
 	int		size;
@@ -29,7 +29,7 @@ char	*internal_strndup(char const *str, int n)
 	return (res);
 }
 
-int		ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int	count;
 	int	prev_space;
@@ -50,7 +50,7 @@ int		ft_count_words(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split_core(char **str_list, char const *s, char c)
+static char	**ft_split_core(char **str_list, char const *s, char c)
 {
 	int			index;
 	int			prev_space;
@@ -79,7 +79,7 @@ char	**ft_split_core(char **str_list, char const *s, char c)
 	return (str_list);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	int		size;
 	char	**str_list;

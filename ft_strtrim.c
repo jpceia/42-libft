@@ -6,13 +6,13 @@
 /*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 18:50:03 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/15 18:02:39 by jceia            ###   ########.fr       */
+/*   Updated: 2021/02/15 21:07:07 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_contains(char c, char const *charset)
+static int	ft_contains(char c, char const *charset)
 {
 	while (*charset)
 		if (c == *charset++)
@@ -20,7 +20,7 @@ int		ft_contains(char c, char const *charset)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	int	start;
 	int	end;
