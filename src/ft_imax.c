@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_intmax.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/08/20 21:49:09 by jpceia            #+#    #+#             */
+/*   Updated: 2021/08/27 18:09:02 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_imax(int x, int y)
 {
-	size_t	index;
-
-	index = 0;
-	while (src[index] && index + 1 < size)
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	if (x > y)
+		return (x);
+	return (y);
 }

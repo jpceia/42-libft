@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_contains.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/04/04 09:32:11 by jpceia            #+#    #+#             */
+/*   Updated: 2021/08/27 17:08:44 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_contains(char c, char const *charset)
 {
-	size_t	index;
-
-	index = 0;
-	while (src[index] && index + 1 < size)
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	while (*charset)
+		if (c == *charset++)
+			return (1);
+	return (0);
 }

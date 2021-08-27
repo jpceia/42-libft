@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/08/27 18:21:35 by jceia             #+#    #+#             */
+/*   Updated: 2021/08/27 18:35:14 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strcat(char *dest, const char *src)
 {
-	size_t	index;
+	int	n;
+	int	index;
 
+	n = ft_strlen(dest);
 	index = 0;
-	while (src[index] && index + 1 < size)
+	while (src[index])
 	{
-		dest[index] = src[index];
+		dest[n + index] = src[index];
 		index++;
 	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	dest[n + index] = 0;
+	return (dest);
 }

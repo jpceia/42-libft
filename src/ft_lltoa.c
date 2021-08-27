@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lltoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/03/29 06:08:23 by jpceia            #+#    #+#             */
+/*   Updated: 2021/08/27 18:13:31 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_lltoa(long long nb)
 {
-	size_t	index;
+	int		index;
+	int		sign;
+	char	*buf;
 
+	if (nb == 0)
+		return (ft_straddc(NULL, '0'));
+	buf = malloc(21);
+	if (!buf)
+		return (NULL);
+	sign = (nb < 0);
+	if (!sign)
+		nb = -nb;
 	index = 0;
-	while (src[index] && index + 1 < size)
+	while (nb)
 	{
-		dest[index] = src[index];
-		index++;
+		buf[index++] = '0' - nb % 10;
+		nb /= 10;
 	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	if (sign)
+		buf[index++] = '-';
+	buf[index] = '\0';
+	return (ft_strreverse(buf));
 }

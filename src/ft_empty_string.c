@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_empty_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/08/27 17:05:20 by jceia             #+#    #+#             */
+/*   Updated: 2021/08/27 17:58:02 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_empty_string(void)
 {
-	size_t	index;
+	char	*s;
 
-	index = 0;
-	while (src[index] && index + 1 < size)
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	s = malloc(1);
+	if (!s)
+		return (NULL);
+	s[0] = '\0';
+	return (s);
 }

@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/09 16:07:57 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 17:54:41 by jceia            ###   ########.fr       */
+/*   Created: 2021/08/27 17:02:42 by jceia             #+#    #+#             */
+/*   Updated: 2021/08/27 18:29:19 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+long	ft_atol(const char *str)
 {
-	size_t	index;
+	long	nb;
+	int		sgn;
 
-	index = 0;
-	while (src[index] && index + 1 < size)
+	nb = 0;
+	while (ft_isspace(*str))
+		str++;
+	sgn = 1;
+	if (*str == '-' || *str == '+')
 	{
-		dest[index] = src[index];
-		index++;
+		if (*str == '-')
+			sgn = -1;
+		str++;
 	}
-	if (index < size)
-		dest[index] = '\0';
-	return (ft_strlen(src));
+	while (ft_isdigit(*str))
+	{
+		nb = 10 * nb + sgn * (*str - '0');
+		str++;
+	}
+	return (nb);
 }
