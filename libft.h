@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 18:49:51 by jceia            ###   ########.fr       */
+/*   Updated: 2021/08/27 19:20:14 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/resource.h>
 
 typedef struct s_list
 {
@@ -100,6 +101,11 @@ void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putendl(char *s);
 void	ft_putnbr(int n);
+
+/*
+ * Get Next Line
+ */
+int		ft_get_next_line(int fd, char **line);
 
 /*
  * Linked-List related functions

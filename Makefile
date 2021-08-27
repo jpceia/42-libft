@@ -58,6 +58,7 @@ SRCS		:= \
 			ft_putstr.c \
 			ft_putendl.c \
 			ft_putnbr.c \
+			ft_get_next_line.c \
 			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
