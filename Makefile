@@ -1,6 +1,9 @@
 NAME		= libft.a
 
-SRCS		= \
+SRC_DIR		= src
+OBJ_DIR		= obj
+
+SRCS		:= \
 			ft_memset.c \
 			ft_bzero.c \
 			ft_memcpy.c \
@@ -34,9 +37,7 @@ SRCS		= \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
-
-BONUS_SRCS	= \
+			ft_putnbr_fd.c \
 			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
@@ -47,8 +48,9 @@ BONUS_SRCS	= \
 			ft_lstiter.c \
 			ft_lstmap.c
 
-OBJS		= $(SRCS:.c=.o)
-BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
+SRCS		:= $(addprefix $(SRC_DIR)/, $(SRCS))
+
+OBJS		= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 CC			= gcc
 RM			= rm -f
@@ -57,18 +59,19 @@ CFLAGS		= -Wall -Wextra -Werror -I.
 
 all:		$(NAME)
 
+$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(NAME):	$(OBJS)
-			ar rc $(NAME) $(OBJS)
+			ar rc $@ $(OBJS)
 
 clean:
-			$(RM) $(OBJS) $(BONUS_OBJS)
+			$(RM) -r $(OBJ_DIR)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean $(NAME)
 
-bonus:		$(OBJS) $(BONUS_OBJS)
-			ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
-
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re
