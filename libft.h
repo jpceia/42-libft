@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 18:36:33 by jceia            ###   ########.fr       */
+/*   Updated: 2021/08/27 18:49:51 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ char	*ft_ulltoa_base(unsigned long long nb, const char *base);
  */
 int		ft_imax(int x, int y);
 int		ft_imin(int x, int y);
+int		ft_mod(int x, int y);
 
 /*
  * Char related functions

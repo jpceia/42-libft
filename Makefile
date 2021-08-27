@@ -41,6 +41,7 @@ SRCS		:= \
 			ft_ulltoa_base.c \
 			ft_imin.c \
 			ft_imax.c \
+			ft_mod.c \
 			ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -79,7 +80,7 @@ CFLAGS		= -Wall -Wextra -Werror -I.
 all:		$(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJS)
