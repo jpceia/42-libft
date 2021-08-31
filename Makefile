@@ -59,6 +59,10 @@ SRCS		:= \
 			ft_putstr.c \
 			ft_putendl.c \
 			ft_putnbr.c \
+			ft_putchar_error.c \
+			ft_putstr_error.c \
+			ft_putendl_error.c \
+			ft_putnbr_error.c \
 			ft_get_next_line.c \
 			ft_lstnew.c \
 			ft_lstadd_front.c \

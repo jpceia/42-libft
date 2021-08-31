@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/27 19:59:40 by jceia            ###   ########.fr       */
+/*   Updated: 2021/08/31 19:54:51 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,10 @@ void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putendl(char *s);
 void	ft_putnbr(int n);
+void	ft_putchar_error(char c);
+void	ft_putstr_error(char *s);
+void	ft_putendl_error(char *s);
+void	ft_putnbr_error(int n);
 
 /*
  * Get Next Line
