@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_str_array_clear.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 21:44:47 by jpceia            #+#    #+#             */
-/*   Updated: 2021/09/09 03:48:11 by jceia            ###   ########.fr       */
+/*   Created: 2021/09/01 18:29:45 by jceia             #+#    #+#             */
+/*   Updated: 2021/09/09 02:54:50 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+void	ft_str_array_clear(char **str_arr, int len)
 {
-	t_list	*l;
+	int	index;
 
-	if (!*lst)
+	index = 0;
+	while (index < len)
 	{
-		*lst = node;
-		return ;
+		free(str_arr[index]);
+		index++;
 	}
-	l = *lst;
-	while (l->next)
-		l = l->next;
-	l->next = node;
+	free(str_arr);
 }

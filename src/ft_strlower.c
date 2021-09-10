@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strlower.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 21:44:47 by jpceia            #+#    #+#             */
-/*   Updated: 2021/09/09 03:48:11 by jceia            ###   ########.fr       */
+/*   Created: 2021/09/01 19:04:26 by jceia             #+#    #+#             */
+/*   Updated: 2021/09/01 19:04:36 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+char	ft_chartolower(char c)
 {
-	t_list	*l;
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
 
-	if (!*lst)
-	{
-		*lst = node;
-		return ;
-	}
-	l = *lst;
-	while (l->next)
-		l = l->next;
-	l->next = node;
+char	*ft_strlower(char const *s)
+{
+	return (ft_strmap(s, ft_chartolower));
 }

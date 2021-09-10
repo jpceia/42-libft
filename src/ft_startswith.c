@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_startswith.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/08 21:44:47 by jpceia            #+#    #+#             */
-/*   Updated: 2021/09/09 03:48:11 by jceia            ###   ########.fr       */
+/*   Created: 2021/09/01 17:46:07 by jceia             #+#    #+#             */
+/*   Updated: 2021/09/10 08:46:59 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *node)
+int	ft_startswith(const char *s, const char *pref)
 {
-	t_list	*l;
+	int	index;
 
-	if (!*lst)
-	{
-		*lst = node;
-		return ;
-	}
-	l = *lst;
-	while (l->next)
-		l = l->next;
-	l->next = node;
+	index = 0;
+	while (s[index] && s[index] == pref[index])
+		index++;
+	return (pref[index] == 0);
 }

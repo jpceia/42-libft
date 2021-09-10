@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/08/31 19:54:51 by jceia            ###   ########.fr       */
+/*   Updated: 2021/09/10 08:48:01 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ typedef struct s_list
 	struct s_list	*next;
 	void			*content;
 }	t_list;
+
+typedef enum e_bool
+{
+	false,
+	true
+}	t_bool;
 
 /*
  * Memory related functions
@@ -52,29 +58,39 @@ char	*ft_strdup(const char *src);
 char	*ft_strndup(char const *str, int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strlower(char const *s);
+char	*ft_strupper(char const *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char c);
 int		ft_strwc(char const *s, char c);
 int		ft_contains(char c, char const *charset);
+int		ft_startswith(const char *s, const char *pref);
+int		ft_endswith(const char *s, const char *suff);
 char	*ft_strreverse(char *s);
 char	*ft_straddc(char *s, char c);
 char	*ft_empty_string(void);
+void	ft_str_array_clear(char **str_arr, int len);
 
 /*
  * Number <=> String conversion functions
  */
 int		ft_atoi(const char *str);
+int		ft_atoi_base(const char *str, char *base);
 char	*ft_itoa(int n);
 long	ft_atol(const char *str);
 char	*ft_lltoa(long long nb);
 char	*ft_lltoa_base(long long nb, const char *base);
 char	*ft_ulltoa(unsigned long long nb);
 char	*ft_ulltoa_base(unsigned long long nb, const char *base);
+float	ft_atof(const char *str);
 
 /*
  * Arithmetic functions
  */
+int		ft_iabs(int x);
+int		ft_isign(int x);
 int		ft_imax(int x, int y);
 int		ft_imin(int x, int y);
 int		ft_mod(int x, int y);
@@ -116,10 +132,13 @@ int		ft_get_next_line(int fd, char **line);
  * Linked-List related functions
  */
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *node);
+void	ft_lstadd_front(t_list **lst, t_list *node);
+t_list	*ft_lstpush_back(t_list **lst, void *content);
+t_list	*ft_lstpush_front(t_list **lst, void *content);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
