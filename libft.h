@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/09/10 08:48:01 by jceia            ###   ########.fr       */
+/*   Updated: 2021/11/17 19:18:18 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int		ft_iabs(int x);
 int		ft_isign(int x);
 int		ft_imax(int x, int y);
 int		ft_imin(int x, int y);
-int		ft_mod(int x, int y);
+int		ft_imod(int x, int y);
 
 /*
  * Char related functions
