@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <jpceia@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:39:48 by jpceia            #+#    #+#             */
-/*   Updated: 2021/02/10 01:07:19 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/17 21:08:37 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief 	Prints a number to the given file descriptor.
+ * 
+ * @param	n	the number to be printed.
+ * @param	fd	the file descriptor. 
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n >= 0)
