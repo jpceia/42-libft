@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:56:24 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/17 20:17:33 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/26 22:40:04 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	btree_level_count(t_btree *root)
 {
 	if (!root)
 		return (0);
-	return (1 + imax(
+	return (1 + ft_imax(
 			btree_level_count(root->left),
 			btree_level_count(root->right)));
 }
