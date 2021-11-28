@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/28 19:48:09 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/28 20:03:32 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,5 +189,11 @@ typedef struct s_rbtree
 	struct s_rbtree	*right;
 	t_rbtree_color	color;
 }	t_rbtree;
+
+int		rbtree_node_is_black(t_rbtree *node);
+int		rbtree_node_is_red(t_rbtree *node);
+int		rbtree_node_is_leaf(t_rbtree *node);
+int		rbtree_black_height(t_rbtree *root);
+int		rbtree_height(t_rbtree *root);
 
 #endif
