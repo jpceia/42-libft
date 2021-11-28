@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/17 20:17:41 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/28 19:48:09 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/resource.h>
-
 
 typedef enum e_bool
 {
@@ -57,7 +56,7 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strlower(char const *s);
 char	*ft_strupper(char const *s);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *str, char const *set);
 char	**ft_split(char const *str, char c);
 int		ft_strwc(char const *s, char c);
 int		ft_contains(char c, char const *charset);
@@ -171,5 +170,24 @@ void	btree_insert_data(t_btree **root, void *item,
 int		btree_level_count(t_btree *root);
 void	*btree_search_item(t_btree *root, void *data_ref,
 			int (*cmpf)(void *, void *));
+
+/*
+ *
+ */
+
+typedef enum e_rbtree_color
+{
+	RBT_RED,
+	RBT_BLACK
+}	t_rbtree_color;
+
+typedef struct s_rbtree
+{
+	void			*item;
+	struct s_rbtree	*parent;
+	struct s_rbtree	*left;
+	struct s_rbtree	*right;
+	t_rbtree_color	color;
+}	t_rbtree;
 
 #endif
