@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/28 20:33:20 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/28 20:48:13 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,5 +202,11 @@ t_rbtree	*rbtree_get_unclie(t_rbtree *node);
 
 t_rbtree	*rbtree_rotate_left(t_rbtree *x);
 t_rbtree	*rbtree_rotate_right(t_rbtree *y);
+
+void		rbtree_apply_prefix(t_rbtree *root, void (*applyf)(void *));
+void		rbtree_apply_infix(t_rbtree *root, void (*applyf)(void *));
+void		rbtree_apply_suffix(t_rbtree *root, void (*applyf)(void *));
+void		rbtree_apply_by_level(t_rbtree *root, void (*applyf)(
+					void *item, int current_level, int is_first_elem));
 
 #endif
