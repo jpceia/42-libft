@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:27:10 by jpceia            #+#    #+#             */
-/*   Updated: 2021/11/28 20:19:06 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/11/28 20:33:20 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,5 +199,8 @@ int			rbtree_height(t_rbtree *root);
 
 t_rbtree	*rbtree_get_sibling(t_rbtree *node);
 t_rbtree	*rbtree_get_unclie(t_rbtree *node);
+
+t_rbtree	*rbtree_rotate_left(t_rbtree *x);
+t_rbtree	*rbtree_rotate_right(t_rbtree *y);
 
 #endif
